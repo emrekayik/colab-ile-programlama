@@ -1,7 +1,8 @@
 # Site settings
-title: My Little Website
-tagline: ""
-url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+title: Colab ile Programlama
+description: "Colab ile Programlama dokümanı ile Colab'de farklı programlama dilleri ile nasıl çalışmalar yapabileceğinizi Türkçe dilinde öğreneceksiniz."
+tagline: "Colab ile Programlama dokümanı ile Colab'de farklı programlama dilleri ile nasıl çalışmalar yapabileceğinizi Türkçe dilinde öğreneceksiniz."
+url: "https://emrekayik.github.com/colab-ile-programlama/" # The base hostname & protocol for your site. Use it if you need absolute URL's
 
 # Social
 socialimg: /img/social.jpg # be sure to change this image
@@ -12,11 +13,17 @@ googleplus: gusername
 instagram: igusername
 
 # Contact
-phone: ""
-email: ""
+phone: "+90 545 698 86 82"
+email: "emrekayik1905@gmail.com"
 
 # Use this for production
 #sass:
 #    style: compressed
 
 exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false

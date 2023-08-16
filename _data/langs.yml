@@ -1,0 +1,12 @@
+- name: Python
+  link: /python/
+  description: Python programlama dili ile Colab
+  finished: true
+- name: R
+  link: /r/
+  description: R programlama dili ile Colab
+  finished: false
+- name: Julia
+  link: /julia/
+  description: Julia programlama dili ile Colab
+  finished: false

@@ -1,14 +1,53 @@
 ---
 layout: default
-title: "Home Page"
-fulltitle: "My New Website | Update Coming August 2004" 
-excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead inside!
+title: "Colab ile Programlama"
+fulltitle: "Colab ile Programlama | Anasayfa"
+excerpt: "Colab ile Programlama"
 ---
-<!-- fulltitle: This overrides the default page title, which is "{{page.tite}} | {{site.title}}" -->
-<!-- excerpt: If this isn't set, it'll pull your {{site.tagline}} for meta description-->
 
-
-<section>
-  <h1>{{site.title}}</h1>
-  <h4>{{site.tagline}}. Isn't your website beautiful?!</h4>
-</section>
+<div class="flex justify-center">
+  <div class="alert alert-warning absolute max-w-xl">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="stroke-current shrink-0 h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+      />
+    </svg>
+    <span>Dokümanların tamamlanması biraz zaman alabilir!</span>
+  </div>
+</div>
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-xl">
+      <h1 class="text-5xl font-bold">{{site.title}}</h1>
+      <p class="py-6">{{site.tagline}}.</p>
+      <div class="w-full flex space-x-6">
+        {% for item in site.data.langs %}
+        <div class="card w-96 bg-base-100 shadow-xl">
+          {% if item.finished == false %}
+          <div class="badge badge-error float-right">bitmedi</div>
+          {% else %}
+          <div class="badge badge-success float-right">bitti</div>
+          {% endif %}
+          <div class="card-body">
+            <h2 class="card-title text-2xl">{{ item.name }}</h2>
+            <p class="text-left ">{{ item.description }}</p>
+            <div class="card-actions justify-center">
+              <a href="{{ item.link }}" class="btn btn-primary">
+                {{ item.name }} ile başla
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
