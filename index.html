@@ -6,7 +6,7 @@ excerpt: "Colab ile Programlama"
 ---
 
 <div class="flex justify-center">
-  <div class="alert alert-warning absolute max-w-xl">
+  <div class="alert alert-warning absolute max-w-xl transition duration-400">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="stroke-current shrink-0 h-6 w-6"
@@ -20,25 +20,32 @@ excerpt: "Colab ile Programlama"
         d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
       />
     </svg>
-    <span>Dokümanların tamamlanması biraz zaman alabilir!</span>
+    <span>Dokümanların tamamlanması biraz zaman alacaktır!</span>
+    <div>
+      <button class="btn btn-sm btn-primary">Tamam</button>
+    </div>
   </div>
 </div>
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content text-center">
     <div class="max-w-xl">
-      <h1 class="text-5xl font-bold">{{site.title}}</h1>
-      <p class="py-6">{{site.tagline}}.</p>
-      <div class="w-full flex space-x-6">
+      <h1 class="text-5xl font-bold title">{{site.title}}</h1>
+      <p class="py-6 tag-line">{{site.tagline}}.</p>
+      <div class="w-full flex space-x-2">
         {% for item in site.data.langs %}
         <div class="card w-96 bg-base-100 shadow-xl">
-          {% if item.finished == false %}
-          <div class="badge badge-error float-right">bitmedi</div>
-          {% else %}
-          <div class="badge badge-success float-right">bitti</div>
-          {% endif %}
+          <div class="flex justify-end w-full">
+            <div class="p-1">
+              {% if item.finished == false %}
+              <div class="badge badge-error">tamamlanmadı</div>
+              {% else %}
+              <div class="badge badge-success">tamamlandı</div>
+              {% endif %}
+            </div>
+          </div>
           <div class="card-body">
             <h2 class="card-title text-2xl">{{ item.name }}</h2>
-            <p class="text-left ">{{ item.description }}</p>
+            <p class="card-desc text-left">{{ item.description }}</p>
             <div class="card-actions justify-center">
               <a href="{{ item.link }}" class="btn btn-primary">
                 {{ item.name }} ile başla

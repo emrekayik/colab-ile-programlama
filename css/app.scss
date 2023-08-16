@@ -1,6 +1,92 @@
+--- 
 ---
----
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 3em;
+}
+
+
+body {
+    --head-from-color: #C23373;
+    --head-to-color: #F8F0E5;
+}
+.title {
+    padding: 10px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right,
+            var(--head-from-color),
+            var(--head-to-color));
+}
+
+.hero { 
+
+    .card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 5px;
+        backdrop-filter: blur(5px);
+        cursor: pointer;
+        transition: 230ms all;
+
+        &:hover {
+            transform: scale(1.04);
+        }
+
+        &:first-child {
+            border-radius: 20px 5px 5px 20px;
+        }
+
+        &:last-child {
+            border-radius: 5px 20px 20px 5px;
+        }
+
+        & .card-title {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        & .card-desc {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        & .btn {
+            border-radius: 20px;
+            transition: 230ms all;
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+
+            & .btn {
+                color: #fff;
+                background-image: linear-gradient(to right,
+                var(--head-from-color),
+                var(--head-to-color));
+            }
+        }
+    }
+
+    &:has(.card:hover) .card:not(:hover) .btn {
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+    }
+}
+
+body:has(.card:nth-child(1):hover) {
+    --head-from-color: #4B8BBE;
+    --head-to-color: #FFE873;
+}
+body:has(.card:nth-child(2):hover) {
+    --head-from-color: #3864ba;
+    --head-to-color: #8c8dff;
+}
+body:has(.card:nth-child(3):hover) {
+    --head-from-color: #9558B2;
+    --head-to-color: #4063D8;
+}

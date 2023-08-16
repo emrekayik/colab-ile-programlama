@@ -19,11 +19,27 @@ email: "emrekayik1905@gmail.com"
 # Use this for production
 #sass:
 #    style: compressed
-
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+    
 exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
 
 plugins:
   - jekyll-postcss
+  - jekyll-toc
+
+toc:
+  min_level: 1
+  max_level: 6
+  ordered_list: false
+  no_toc_section_class: no_toc_section
+  list_id: toc
+  list_class: "drawer bg-base-200 w-56 p-0 [&_li>*]:rounded-none"
+  sublist_class: ''
+  item_class: toc-entry
+  item_prefix: toc-
 
 postcss:
   cache: false
