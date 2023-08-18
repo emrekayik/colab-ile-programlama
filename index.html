@@ -30,13 +30,13 @@ excerpt: "Colab ile Programlama"
       <p class="py-6 tag-line">{{site.tagline}}.</p>
       <div class="w-full flex space-x-2">
         {% for item in site.data.langs %}
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <div class="flex justify-end w-full">
-            <div class="p-1">
+        <div class="card indicator w-96 shadow-xl cursor-pointer">
+          <div class="flex w-full">
+            <div class="mr-2">
               {% if item.finished == false %}
-              <div class="badge badge-error">tamamlanmadı</div>
+                <span class="indicator-item badge badge-warning">yakında...</span> 
               {% else %}
-              <div class="badge badge-success">tamamlandı</div>
+                <span class="indicator-item badge badge-success">tamamlandı</span>
               {% endif %}
             </div>
           </div>

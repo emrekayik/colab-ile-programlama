@@ -4,6 +4,10 @@ title: Home
 docs: true
 ---
 
-<article class="prose md:prose-lg lg:prose-xl mt-20">
-    {{ content  }}
-</article>
+<div class="@container">
+  <div class="flex justify-center">
+    <article class="prose md:prose-md lg:prose-lg px-2 mt-24">
+      {{ content | toc}}
+    </article>
+  </div>
+</div>

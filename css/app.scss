@@ -1,4 +1,4 @@
---- 
+---
 ---
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -23,14 +23,16 @@ body {
             var(--head-to-color));
 }
 
+.footnote{
+    color: var(--head-from-color);
+}
 .hero { 
-
     .card {
         background: rgba(255, 255, 255, 0.05);
         border-radius: 5px;
         backdrop-filter: blur(5px);
-        cursor: pointer;
         transition: 230ms all;
+        z-index: 2;
 
         &:hover {
             transform: scale(1.04);
@@ -38,10 +40,12 @@ body {
 
         &:first-child {
             border-radius: 20px 5px 5px 20px;
+            z-index: 3;
         }
 
         &:last-child {
             border-radius: 5px 20px 20px 5px;
+            z-index: 1;
         }
 
         & .card-title {

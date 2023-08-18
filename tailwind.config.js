@@ -18,6 +18,10 @@ module.exports = {
   },
   plugins: [
     require("daisyui"),
+    require('@tailwindcss/container-queries'),
     require('@tailwindcss/typography'),
   ],
+  daisyui: {
+    themes: ["light", "dark", "night"],
+  },
 }

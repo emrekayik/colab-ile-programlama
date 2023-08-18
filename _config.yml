@@ -1,7 +1,7 @@
 # Site settings
 title: Colab ile Programlama
-description: "Colab ile Programlama dokümanı ile Colab'de farklı programlama dilleri ile nasıl çalışmalar yapabileceğinizi Türkçe dilinde öğreneceksiniz."
-tagline: "Colab ile Programlama dokümanı ile Colab'de farklı programlama dilleri ile nasıl çalışmalar yapabileceğinizi Türkçe dilinde öğreneceksiniz."
+description: "Colab ile Programlama dokümanı ile Google Colab'de farklı programlama dilleri ile nasıl çalışmalar yapabileceğinizi Türkçe dilinde öğreneceksiniz."
+tagline: "Colab ile Programlama dokümanı ile Google Colab'de farklı programlama dilleri ile nasıl çalışmalar yapabileceğinizi Türkçe dilinde öğreneceksiniz."
 url: "https://emrekayik.github.com/colab-ile-programlama/" # The base hostname & protocol for your site. Use it if you need absolute URL's
 
 # Social
@@ -36,10 +36,9 @@ toc:
   ordered_list: false
   no_toc_section_class: no_toc_section
   list_id: toc
-  list_class: "drawer bg-base-200 w-56 p-0 [&_li>*]:rounded-none"
+  list_class: "menu width-full bg-base-200 rounded-box"
   sublist_class: ''
   item_class: toc-entry
-  item_prefix: toc-
 
 postcss:
   cache: false
